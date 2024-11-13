@@ -1,0 +1,30 @@
+/* Define a cor de fundo da página inteira */
+body {
+    background-color: #f0f8ff; /* cor de fundo azul claro */
+    text-align: center;
+}
+
+/* Define a cor de fundo do cabeçalho */
+h1 {
+    background-color: #4682b4; /* cor de fundo azul mais escuro */
+    color: white; /* cor do texto em branco para contraste */
+    padding: 10px;
+    text-align: center;
+}
+
+/* Define a cor de fundo dos botões */
+button {
+    background-color: #87cefa; /* cor de fundo azul claro para botões */
+    border: none;
+    color: white; /* cor do texto em branco */
+    padding: 10px 20px;
+    cursor: pointer;
+    text-align: center;
+}
+
+/* Define a cor de fundo dos parágrafos */
+p {
+    background-color: #e0ffff; /* cor de fundo azul muito claro */
+    padding: 10px;
+    text-align: center;
+}
