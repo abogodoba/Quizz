@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Questão 4</title>
+</head>
+<body>
+    <h2>4. Qual dos métodos abaixo cria uma cópia rasa (shallow copy) de um array?</h2>
+    <label>
+        <input type="radio" name="q4" value="certo"> a. array.slice()<br>
+        <input type="radio" name="q4" value="errado"> b. array.comp()<br>
+        <input type="radio" name="q4" value="errado"> c. array.map()<br>
+        <input type="radio" name="q4" value="errado"> d. array.clone()<br>
+    </label>
+    <br><button onclick="salvarResposta()">Próxima</button>
+
+    <script>
+        function salvarResposta() {
+            const resposta = document.querySelector('input[name="q4"]:checked');
+            if (resposta && resposta.value === "certo") {
+                let acertos = parseInt(localStorage.getItem("acertos")) || 0;
+                localStorage.setItem("acertos", acertos + 1);
+            }
+            window.location.href = "q5.html";  // Redireciona para a quinta questão
+        }
+    </script>
+</body>
+</html>

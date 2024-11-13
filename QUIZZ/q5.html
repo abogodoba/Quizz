@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Questão 5</title>
+</head>
+<body>
+    <h2>5. O que o operador === faz em JavaScript?</h2>
+    <label>
+        <input type="radio" name="q5" value="certo"> a. Compara valor e tipo.<br>
+        <input type="radio" name="q5" value="errado"> b. Compara apenas o valor.<br>
+        <input type="radio" name="q5" value="errado"> c. Compara apenas o tipo.<br>
+        <input type="radio" name="q5" value="errado"> d. Compara apenas referências de objetos.<br>
+    </label>
+    <br><button onclick="salvarResposta()">Concluir</button>
+
+    <script>
+        function salvarResposta() {
+            const resposta = document.querySelector('input[name="q5"]:checked');
+            if (resposta && resposta.value === "certo") {
+                let acertos = parseInt(localStorage.getItem("acertos")) || 0;
+                localStorage.setItem("acertos", acertos + 1);
+            }
+            window.location.href = "resultado.html";
+        }
+    </script>
+</body>
+</html>

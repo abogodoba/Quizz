@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Questão 2</title>
+</head>
+<body>
+    <h2>2. Qual a saída do código abaixo? `console.log(typeof null)`</h2>
+    <label>
+        <input type="radio" name="q2" value="errado"> a. "null"<br>
+        <input type="radio" name="q2" value="errado"> b. "undefined"<br>
+        <input type="radio" name="q2" value="certo"> c. "object"<br>
+        <input type="radio" name="q2" value="errado"> d. "string"<br>
+    </label>
+    <br><button onclick="salvarResposta()">Próxima</button>
+
+    <script>
+        function salvarResposta() {
+            const resposta = document.querySelector('input[name="q2"]:checked');
+            if (resposta && resposta.value === "certo") {
+                let acertos = parseInt(localStorage.getItem("acertos")) || 0;
+                localStorage.setItem("acertos", acertos + 1);
+            }
+            window.location.href = "q3.html";
+        }
+    </script>
+</body>
+</html>

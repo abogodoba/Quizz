@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Resultado</title>
+</head>
+<body>
+    <h1>Resultado Final</h1>
+    <p id="resultado"></p>
+    <button onclick="reiniciarQuiz()">Reiniciar Quiz</button>
+
+    <script>
+        function mostrarResultado() {
+            const acertos = parseInt(localStorage.getItem("acertos")) || 0;
+            document.getElementById("resultado").innerText = `Você acertou ${acertos} de 5 questões.`;
+        }
+
+        function reiniciarQuiz() {
+            localStorage.removeItem("acertos");
+            window.location.href = "q1.html";
+        }
+
+        mostrarResultado();
+    </script>
+</body>
+</html>

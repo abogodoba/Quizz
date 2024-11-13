@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Questão 3</title>
+</head>
+<body>
+    <h2>3. Qual método é usado para adicionar um item ao final de um array em JavaScript?</h2>
+    <label>
+        <input type="radio" name="q3" value="errado"> a. add()<br>
+        <input type="radio" name="q3" value="certo"> b. push()<br>
+        <input type="radio" name="q3" value="errado"> c. pop()<br>
+        <input type="radio" name="q3" value="errado"> d. insert()<br>
+    </label>
+    <br><button onclick="salvarResposta()">Próxima</button>
+
+    <script>
+        function salvarResposta() {
+            const resposta = document.querySelector('input[name="q3"]:checked');
+            if (resposta && resposta.value === "certo") {
+                let acertos = parseInt(localStorage.getItem("acertos")) || 0;
+                localStorage.setItem("acertos", acertos + 1);
+            }
+            window.location.href = "q4.html";  // Redireciona para a quarta questão
+        }
+    </script>
+</body>
+</html>
+
